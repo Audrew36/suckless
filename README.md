@@ -18,3 +18,6 @@ to enter search press "super key + p"
 to enter new window press "super key + enter"
 to move between windows use "super key + k or j"
 to switch between work spaces press "super key + tab"
+to escape dwm press "super + shift + q"
+to set backround run "sudo apt-get install fehbg" and set ~/.fehb in your .xinitrc or .bashrc and make "feh --bg-fill ~/Picures/myWallpaper.png"
+to set transparent windows run "sudo apt-get install compton" and set create comton.conf in ~/.config/comtpon/ directory with necessary settings. Then write "compton" in terminal in order to launch it 
