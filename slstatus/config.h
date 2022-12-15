@@ -67,28 +67,28 @@ static const struct arg args[] = {
 	just download them, make them executable and put them in /usr/local bin		*/
 
 	/* function format          argument */
-	{ run_command,	"^c#cc6666^ %2s", "./cpuicon.sh " },
+	{ run_command,	"^c#cc6666^ %2s", "~/.config/suckless/slstatus/cpuicon.sh " },
 	{ cpu_perc,	"^c#c5c8c6^ %s%% ", NULL },
 
-   	{ run_command,	"^c#b5bd68^ %2s ", "./memicon.sh"  },
+   	{ run_command,	"^c#b5bd68^ %2s ", "~/.config/suckless/slstatus/memicon.sh"  },
 	{ ram_perc,	"^c#c8c5c6^ %s%% ", NULL },
 
-   	{ run_command,	"^c#f0c674^ %2s ", "./homeicon.sh" },
+   	{ run_command,	"^c#f0c674^ %2s ", "~/.config/suckless/slstatus/homeicon.sh" },
 /*  { run_command,	"^c#c5c8c6^ %2s ", "hdd.sh" },   */
-	{ disk_perc,	"^c#c5c8c6^ %s%% ", "/home/sos/" },
+	{ disk_perc,	"^c#c5c8c6^ %s%% ", "/home/audrew/" },
 
-	{ run_command,	"^c#81a2be^ %2s ", "./neticon.sh" },
-	{ run_command,	"^c#c5c8c6^ %2s ", "./ip.sh" },
-	{ run_command,	"^c#cc6666^ %2s ", "./vpnicon.sh" },
+	{ run_command,	"^c#81a2be^ %2s ", "~/.config/suckless/slstatus/neticon.sh" },
+	{ run_command,	"^c#c5c8c6^ %2s ", "~/.config/suckless/slstatus/ip.sh" },
+	{ run_command,	"^c#cc6666^ %2s ", "~/.config/suckless/slstatus/vpnicon.sh" },
 
-    { run_command,	"^c#85678f^ %s ", "./volicon.sh " },
-	{ run_command,	"^c#c5c8c6^ %s ", "./vol.sh " },
+    { run_command,	"^c#85678f^ %s ", "~/.config/suckless/slstatus/volicon.sh " },
+	{ run_command,	"^c#c5c8c6^ %s ", "~/.config/suckless/slstatus/vol.sh " },
 
-	{ run_command,	"^c#c5c8c6^ %2s ", "./forecast.sh " },
+/*	{ run_command,	"^c#c5c8c6^ %2s ", "./forecast.sh " }, */
 /*	{ run_command,	"^c#cc6666^ %2s ", "./tempicon.sh " }, */
 /*	{ run_command,	"^c#c5c8c6^ %2s ", "./temp.sh " }, */
 
 
-	{ run_command,	"^c#c5c8c6^ %2s ", "./clock.sh" },
+	{ run_command,	"^c#c5c8c6^ %2s ", "~/.config/suckless/slstatus/clock.sh" },
 
 };

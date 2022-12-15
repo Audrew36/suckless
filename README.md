@@ -8,6 +8,12 @@ Most usually dwm directory is in ~/.config/suckless/ directory
 
 cd into all suckless folders individually and do "sudo make" and "sudo make install"
 
+to set backround run "sudo apt-get install feh" and set ~/.fehbg in your .xinitrc or .bashrc and make "feh --bg-fill ~/Pictures/myWallpaper.png"
+to set transparent windows run "sudo apt-get install compton" and set create comton.conf in ~/.config/compton/ directory with necessary settings ( you can find compton.conf example in root directory). Then add "compton -b" command to .bashrc or .xinitrc to launch it on startup
+to set slstatus, you need to configure correct path for every script in config.def.h and set sudo priviliges for sh scripts. To execute them on autostart write "exec slstatus" in your .bashrc or .xinitrc
+
+NOTE: in order for suckless patch to apply you may need to delete config.h and edit config.def.h before compiling and config.h will be generated automatically 
+
 and thats all. enjoy
 
 ### Use
@@ -19,6 +25,3 @@ to enter new window press "super key + enter"
 to move between windows use "super key + k or j"
 to switch between work spaces press "super key + tab"
 to escape dwm press "super + shift + q"
-to set backround run "sudo apt-get install fehbg" and set ~/.fehb in your .xinitrc or .bashrc and make "feh --bg-fill ~/Picures/myWallpaper.png"
-to set transparent windows run "sudo apt-get install compton" and set create comton.conf in ~/.config/compton/ directory with necessary settings ( you can find compton.conf example in root directory). Then add "compton -b" command to .bashrc or .xinitrc to launch it on startup
-to set slstatu, you might need to set sudo priviliges for sh scripts. To execute them on autostart write "exec slstatus" in your .bashrc or .xinitrc
