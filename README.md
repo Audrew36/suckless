@@ -20,8 +20,12 @@ and thats all. enjoy
 
 Windows key is a super key
 
-to enter search press "super key + p"
-to enter new window press "super key + enter"
-to move between windows use "super key + k or j"
-to switch between work spaces press "super key + tab"
-to escape dwm press "super + shift + q"
+# to enter search in dmenu press "super key + i"
+# to enter new window press "super key + enter"
+# to move between windows use "super key + k or j"
+# to switch between work spaces press "super key + tab"
+# to escape dwm press "super + shift + q"
+# to switch main window press "super key + shift + enter"
+# to change language to lithuanian or united states press "super key + space or super key + shift + space"
+# to volume up or down press "alt + o or alt + p"
+

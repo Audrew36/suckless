@@ -6,13 +6,13 @@ static const unsigned int gappx     = 14;       /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "Ubuntu Nerd Font:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#282a36";
-static const char col_gray2[]       = "#282a36";
-static const char col_gray3[]       = "#96b5b4";
-static const char col_gray4[]       = "#d7d7d7";
-static const char col_cyan[]        = "#4d4d4d";
+static const char *fonts[]          = { "monospace:size=7", "Ubuntu Nerd Font:size=7" };
+static const char dmenufont[]       = "monospace:size=7";
+static const char col_gray1[]       = "#1d1f21";
+static const char col_gray2[]       = "#444444";
+static const char col_gray3[]       = "#707770";
+static const char col_gray4[]       = "#c5c8c6";
+static const char col_cyan[]        = "#555777";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -68,7 +68,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *alttermcmd[]  = { "urxvt", NULL };
-static const char *web[] = { "firefox", NULL };
+static const char *web[] = { "firefox-esr", NULL };
 static const char *files[] = { "pcmanfm", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -77,13 +77,14 @@ static Key keys[] = {
     { ALTKEY,                       XK_p,       spawn,          SHCMD("~/.local/bin/bmenu")},
     { ALTKEY,                       XK_f,       spawn,          SHCMD(TERMINAL " -e vifmrun") },
     { ALTKEY,                       XK_x,       killclient,     {0} },
-    { ALTKEY,                       XK_F12,     spawn,          SHCMD("/opt/piavpn/bin/pia-client")},
+/*    { ALTKEY,                       XK_o,     spawn,          SHCMD("~/.local/bin/louder")}, */
+/*    { ALTKEY,                       XK_p,     spawn,          SHCMD("~/.local/bin/quieter")}, */
 
-    { 0,            XF86XK_AudioRaiseVolume,    spawn,          SHCMD("~/.local/bin/louder") },
-    { 0,            XF86XK_AudioLowerVolume,    spawn,          SHCMD("~/.local/bin/quieter") },
-    { 0,            XF86XK_AudioMute,           spawn,          SHCMD("~/.local/bin/hush") },
+/*    { 0,            XF86XK_AudioRaiseVolume,    spawn,          SHCMD("~/.local/bin/louder") }, */
+/*    { 0,            XF86XK_AudioLowerVolume,    spawn,          SHCMD("~/.local/bin/quieter") }, */
+/*    { 0,            XF86XK_AudioMute,           spawn,          SHCMD("~/.local/bin/hush") }, */
 
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_i,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = web } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = files } },
@@ -95,7 +96,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ControlMask,           XK_Return, zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_x,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
@@ -103,15 +104,16 @@ static Key keys[] = {
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[4]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY,                       XK_m,  setlayout,      {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = +1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Delete, spawn,         SHCMD("~/.local/bin/lok") },
-	{ MODKEY|ShiftMask             XK_q       spawn,         SHCMD("pmenu") } },
+/*	{ MODKEY|ShiftMask,             XK_Delete, spawn,         SHCMD("~/.local/bin/lok") }, */
+	{ MODKEY|ShiftMask,             XK_space, spawn,          SHCMD("setxkbmap us") },
+	{ MODKEY,                       XK_space,  spawn,         SHCMD("setxkbmap lt") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
