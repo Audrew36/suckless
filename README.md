@@ -28,4 +28,5 @@ Windows key is a super key
 # to switch main window press "super key + shift + enter"
 # to change language to lithuanian or united states press "super key + space or super key + shift + space"
 # to volume up or down press "alt + o or alt + p"
-
+# to open firefox press "super key + w"
+# to set window for other work space press "super key + ctrl + shift + workspace number"
