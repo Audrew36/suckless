@@ -66,17 +66,20 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /*static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };*/
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
+static const char *nvimterm[] = { "st", "nvim", TERMINAL ":terminal", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *alttermcmd[]  = { "urxvt", NULL };
-static const char *web[] = { "firefox-esr", NULL };
+static const char *web[] = { "firefox", NULL };
 static const char *files[] = { "pcmanfm", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_Return,  spawn,          {.v = alttermcmd } },
-    { ALTKEY,                       XK_b,       spawn,          SHCMD("~/.local/bin/wal")},
+    { ALTKEY,                       XK_a,       spawn,          {.v = nvimterm } },
     { ALTKEY,                       XK_p,       spawn,          SHCMD("~/.local/bin/bmenu")},
     { ALTKEY,                       XK_f,       spawn,          SHCMD(TERMINAL " -e vifmrun") },
     { ALTKEY,                       XK_x,       killclient,     {0} },
+	{ ALTKEY,                       XK_m,      spawn,          SHCMD("amixer -D pulse sset Master 10%+")}, 
+	{ ALTKEY,                       XK_n,      spawn,          SHCMD("amixer -D pulse sset Master 10%-")}, 
 /*    { ALTKEY,                       XK_o,     spawn,          SHCMD("~/.local/bin/louder")}, */
 /*    { ALTKEY,                       XK_p,     spawn,          SHCMD("~/.local/bin/quieter")}, */
 
