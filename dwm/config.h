@@ -42,10 +42,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
-	{ "TTT",      bstack },
-	{ "===",      bstackhoriz },
+	//{ "><>",      NULL },    
+	//{ "[M]",      monocle },
+	//{ "TTT",      bstack },
+	//{ "===",      bstackhoriz },
 };
 
 /* key definitions */
@@ -68,12 +68,11 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *nvimterm[] = { "st", "nvim", TERMINAL ":terminal", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *alttermcmd[]  = { "nautilus", NULL };
 static const char *web[] = { "firefox", NULL };
 static const char *files[] = { "gnome-control-center", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ ALTKEY,                       XK_f,  spawn,          {.v = alttermcmd } },
+	{ ALTKEY,                       XK_f,  spawn,          SHCMD("nautilus")},
     { ALTKEY,                       XK_a,       spawn,          {.v = nvimterm } },
     { ALTKEY,                       XK_s,       spawn,          SHCMD("gnome-screenshot")},
     { ALTKEY,                       XK_f,       spawn,          SHCMD(TERMINAL " -e vifmrun") },
