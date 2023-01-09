@@ -68,14 +68,14 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *nvimterm[] = { "st", "nvim", TERMINAL ":terminal", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *alttermcmd[]  = { "urxvt", NULL };
+static const char *alttermcmd[]  = { "nautilus", NULL };
 static const char *web[] = { "firefox", NULL };
-static const char *files[] = { "pcmanfm", NULL };
+static const char *files[] = { "gnome-control-center", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ ALTKEY,                       XK_Return,  spawn,          {.v = alttermcmd } },
+	{ ALTKEY,                       XK_f,  spawn,          {.v = alttermcmd } },
     { ALTKEY,                       XK_a,       spawn,          {.v = nvimterm } },
-    { ALTKEY,                       XK_p,       spawn,          SHCMD("~/.local/bin/bmenu")},
+    { ALTKEY,                       XK_s,       spawn,          SHCMD("gnome-screenshot")},
     { ALTKEY,                       XK_f,       spawn,          SHCMD(TERMINAL " -e vifmrun") },
     { ALTKEY,                       XK_x,       killclient,     {0} },
 	{ ALTKEY,                       XK_m,      spawn,          SHCMD("amixer -D pulse sset Master 10%+")}, 

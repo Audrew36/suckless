@@ -34,3 +34,4 @@ Windows key is a super key
 # to set window for other work space press "super key + ctrl + shift + workspace number"
 # to volume up or down use "alt + n or alt + m"
 # to do screenshots install gnome-screenshots and then press "alt + s"
+# to open gnome-control-center press "super key + f" or to open nautilus press "alt + f"
