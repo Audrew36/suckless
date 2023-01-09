@@ -4,7 +4,7 @@ In order to install dwm together with ubuntu you going to need to move dwm.deskt
 For debian based systems, please watch tutorials on how to setup .xinitrc with "exec dwm"
 ### Installation
 
-You most probably will need "sudo apt-get install -y libxinerama-dev"
+You most probably will need "sudo apt-get install -y libxinerama-dev" and "sudo apt install libxft-dev"
 
 Most usually dwm directory is in ~/.config/suckless/ directory
 
