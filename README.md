@@ -12,7 +12,7 @@ cd into all suckless folders individually and do "sudo make" and "sudo make inst
 
 to set backround run "sudo apt-get install feh" and set ~/.fehbg in your .xinitrc or .bashrc and make "feh --bg-fill ~/Pictures/myWallpaper.png"
 to set transparent windows run "sudo apt-get install compton" and set create comton.conf in ~/.config/compton/ directory with necessary settings ( you can find compton.conf example in root directory). Then add "compton -b" command to .bashrc or .xinitrc to launch it on startup
-to set slstatus, you need to configure correct path for every script in config.def.h and set sudo priviliges for sh scripts. To execute them on autostart write "exec slstatus" in your .bashrc or .xinitrc
+to set slstatus, you need to configure correct path for every script in config.def.h and set sudo priviliges for sh scripts. To execute them on autostart write "exec slstatus" in your .bashrc or .xinitrc . Also you may need to set permissions for dwm.desktop with command "sudo chmod 644 /usr/share/xsessions/dwm.desktop"
 
 NOTE: in order for suckless patch to apply you may need to delete config.h and edit config.def.h before compiling and config.h will be generated automatically 
 
