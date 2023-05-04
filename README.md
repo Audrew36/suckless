@@ -4,7 +4,7 @@ In order to install dwm together with ubuntu you going to need to move dwm.deskt
 For debian based systems, please watch tutorials on how to setup .xinitrc with "exec dwm"
 ### Installation
 
-You most probably will need "sudo apt-get install -y libxinerama-dev" and "sudo apt install libxft-dev"
+You most probably will need "sudo apt-get install -y libxinerama-dev" and "sudo apt install libxft-dev"  "sudo apt-get install gnome-screenshot"
 
 Most usually dwm directory is in ~/.config/suckless/ directory
 
@@ -22,16 +22,16 @@ and thats all. enjoy
 
 Windows key is a super key
 
-# to enter search in dmenu press "super key + i"
-# to enter new window press "super key + enter"
-# to move between windows use "super key + k or j"
-# to switch between work spaces press "super key + tab"
-# to escape dwm press "super + shift + q"
-# to switch main window press "super key + shift + enter"
-# to change language to lithuanian or united states press "super key + space or super key + shift + space"
-# to volume up or down press "alt + o or alt + p"
-# to open firefox press "super key + w"
-# to set window for other work space press "super key + ctrl + shift + workspace number"
-# to volume up or down use "alt + n or alt + m"
-# to do screenshots install gnome-screenshots and then press "alt + s"
-# to open gnome-control-center press "super key + f" or to open nautilus press "alt + f"
+ to enter search in dmenu press "super key + i"
+ to enter new window press "super key + enter"
+ to move between windows use "super key + k or j"
+ to switch between work spaces press "super key + tab"
+ to escape dwm press "super + shift + q"
+ to switch main window press "super key + shift + enter"
+ to change language to lithuanian or united states press "super key + space or super key + shift + space"
+ to volume up or down press "alt + o or alt + p"
+ to open firefox press "super key + w"
+ to set window for other work space press "super key + ctrl + shift + workspace number"
+ to volume up or down use "alt + n or alt + m"
+ to do screenshots press "alt + s"
+ to open gnome-control-center press "super key + f" or to open nautilus press "alt + f"
